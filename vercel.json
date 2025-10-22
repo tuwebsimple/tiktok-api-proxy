@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/stats.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/stats",
+      "dest": "api/stats.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/stats.py"
+    }
+  ]
+}
+
